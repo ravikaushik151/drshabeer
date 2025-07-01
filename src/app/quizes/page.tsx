@@ -27,7 +27,7 @@ const quizData = [
 
 export default function HealthQuizPage() {
   const [current, setCurrent] = useState(0);
-  const [selected, setSelected] = useState<string | null>(null);
+const [selected, setSelected] = useState<string | null>(null);
   const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
 
