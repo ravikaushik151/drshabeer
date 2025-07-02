@@ -84,57 +84,49 @@ const reelData = [
   }
 ];
 
-const testimonialData = [
-  {
-    name: 'Rahul M.',
-    feedback: 'Thanks to Dr. Shabeer, my surgery was smooth and recovery was quick!',
-    location: 'Bangalore',
-  },
-  {
-    name: 'Ayesha S.',
-    feedback: 'Very caring and expert doctor. Highly recommend him!',
-    location: 'Hyderabad',
-  },
-  {
-    name: 'Vinod T.',
-    feedback: 'From consultation to surgery, the whole team was excellent.',
-    location: 'Mysore',
-  },
-  {
-    name: 'Lakshmi D.',
-    feedback: 'Modern, clean clinic and compassionate care.',
-    location: 'Chennai',
-  },
-  {
-    name: 'Arjun P.',
-    feedback: 'I walked in scared, walked out confident thanks to the support.',
-    location: 'Delhi',
-  },
-  {
-    name: 'Zara K.',
-    feedback: 'Grateful for the diet advice and guidance post-op.',
-    location: 'Kochi',
-  },
-  {
-    name: 'Farhan N.',
-    feedback: 'Life-changing experience. Thank you!',
-    location: 'Mumbai',
-  },
-  {
-    name: 'Sneha V.',
-    feedback: 'Follow-up care was as good as the surgery.',
-    location: 'Pune',
-  },
-  {
-    name: 'Rakesh G.',
-    feedback: 'Highly advanced equipment and skilled doctor.',
-    location: 'Ahmedabad',
-  },
-  {
-    name: 'Meena R.',
-    feedback: 'Friendly staff, caring environment, and great outcomes.',
-    location: 'Coimbatore',
-  }
+const testimonials = [
+    {
+        name: 'Arati Sethy',
+        content: `Amidst of covid pandemic, my aunt got diagnosed with
+      colon tumor. Local doctors diagnosed it as cancer
+      stage-1. As they stay in my native place Odisha, we
+      were clueless what to do. I live in bangalore. One
+      of my colleague referred Dr. Shabeer. With no delay,
+      i took his appointment and rushed to him. After
+      going through the reports without even checking the
+      patient, he said chemo may not be required. He
+      helped a lot to get my aunt here and directly get
+      admitted to Fortis for surgery. Post surgery, biopsy
+      report revealed that its stage 0 and no need for
+      chemo therapy. Everything just happened ontime and
+      perfectly. When i thanked Dr. Sir, he was humble
+      enough to give the credit to Allaha. Sir, you were a
+      blessing to our family in this crisis. My uncle aunt
+      were so happy and pleased by your interaction in
+      entire process. May God always bless you and help
+      you in serving mankind. Thank you very much.`,
+    },
+    {
+        name: 'Inayathulla Khan Lavani',
+        content: `Before visiting Dr. Shabeer Ahmed for my dad's
+      surgery, I had visited other doctors and wasn't
+      satisfied enough, and I must say Dr is very humble
+      person who shows compassion towards patients and
+      also authority in field of laparoscopy, which is
+      rare combination to find in this mundane world.
+      Moreover my dad's surgery was successful and he is
+      recovering. I would definately recommend anyone to
+      visit Dr once before taking final call`,
+    },
+    {
+        name: 'Mir Nasair Hussain',
+        content: `Best ever Dr.I have seen in Bangalore God has given
+      shiffa in his hand Excellent treatment centre in
+      Bangalore I was suffering piles from 11years He did
+      my operation successful Dr. Shabeer Ahmed has 30
+      years Excellent Experience God give him Good Health
+      / wealth I salute you sir`,
+    },
 ];
 
 export default function MediaShowcasePage() {
@@ -142,8 +134,7 @@ export default function MediaShowcasePage() {
     <div className="media-showcase-wrapper">
       <div className="container">
         <h2 className="page-title">Media & Testimonials</h2>
-
-        {/* Videos Section */}
+{/* 
         <section className="media-section">
           <h3 className="section-heading">Videos</h3>
           <div className="media-grid">
@@ -162,7 +153,6 @@ export default function MediaShowcasePage() {
           </div>
         </section>
 
-        {/* Reels Section */}
         <section className="media-section">
           <h3 className="section-heading">Reels</h3>
           <div className="media-grid">
@@ -177,16 +167,16 @@ export default function MediaShowcasePage() {
               </div>
             ))}
           </div>
-        </section>
+        </section> */}
 
         {/* Testimonials Section */}
         <section className="testimonial-section">
           <h3 className="section-heading">Patient Testimonials</h3>
           <div className="testimonial-grid">
-            {testimonialData.map((item, index) => (
+            {testimonials.map((item, index) => (
               <div className="testimonial-card" key={index}>
-                <p className="testimonial-feedback">"{item.feedback}"</p>
-                <p className="testimonial-name">- {item.name}, {item.location}</p>
+                <p className="testimonial-feedback">"{item.name}"</p>
+                <p className="testimonial-name">- {item.name}, {item.content}</p>
               </div>
             ))}
           </div>
